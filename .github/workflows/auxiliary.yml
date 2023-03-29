@@ -1,0 +1,18 @@
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: console log
+        run: echo "hola"
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: log
+        run: touch saludo.js && echo console.log("que onda bruno") saludo.js && node saludo.js
+
