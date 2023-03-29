@@ -10,6 +10,5 @@ jobs:
         with:
           node-version: '14'
       - run: touch archivo.txt
-
       - run: echo "esto es un archivo ejecutado desde github-action" >> archivo.txt
       - run: cat arcivo.txt
