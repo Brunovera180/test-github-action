@@ -1,0 +1,14 @@
+name: test-action
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  test-action-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: touch archive.txt
+      - run: echo "esto es un archivo ejecutado desde github-action" >> archivo.txt
+      - run: cat arcivo.txt
