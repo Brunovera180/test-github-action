@@ -9,6 +9,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: touch archive.txt
+      - run: touch archivo.txt
+
       - run: echo "esto es un archivo ejecutado desde github-action" >> archivo.txt
       - run: cat arcivo.txt
